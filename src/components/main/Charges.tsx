@@ -36,7 +36,7 @@ const Charges: React.FC = () => {
             activeTab === 'Charges' ? 'tab-btn-active' : 'tab-btn-inactive'
           }`}
         >
-          Charges
+          Charges333
         </button>
         <button
           onClick={() => handleTabChange('Charges History')}
