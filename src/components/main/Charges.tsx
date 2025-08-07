@@ -27,7 +27,7 @@ const Charges: React.FC = () => {
   };
 
   return (
-    <div className="w-full h-full bg-white rounded-2xl shadow-lg px-4 sm:px-6  py-2 md:py-6 flex flex-col">
+    <div className="w-full h-full bg-white rounded-2xl shadow-lg px-3 sm:px-6  py-2 md:py-6 flex flex-col">
       {/* Tab Navigation */}
       <div className="flex border-b border-subtle mb-2 lg:mb-6 overflow-x-auto whitespace-nowrap scrollbar-thin scrollbar-track-[var(--input-bg)] scrollbar-thumb-gray-400">
         <button
