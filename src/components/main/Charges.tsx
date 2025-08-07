@@ -44,7 +44,7 @@ const Charges: React.FC = () => {
             activeTab === 'Charges History' ? 'tab-btn-active' : 'tab-btn-inactive'
           }`}
         >
-          Charges History
+          Charges History44
         </button>
         {isAdmin && (
           <button
