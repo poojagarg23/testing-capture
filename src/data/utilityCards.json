@@ -1,0 +1,62 @@
+[
+  {
+    "id": "macromate-clinical",
+    "title": "MacroMate Clinical",
+    "description": "Use text expansion and macros to quickly insert common phrases, saving time and ensuring consistency in clinical documentation and notes.",
+    "icon": "MacroMateClinicalIcon",
+    "readMoreText": "Read more",
+    "route": "/utilities/macromate-clinical"
+  },
+  {
+    "id": "consult-tracker",
+    "title": "Consult Tracker",
+    "description": "Monitor and manage patient consultations efficiently with real-time updates, appointment tracking, medical notes, and follow-up scheduling tools.",
+    "icon": "ConsultationIcon",
+    "readMoreText": "Read more",
+    "route": "/utilities/consults-tracking-table"
+  },
+  {
+    "id": "team-calendar",
+    "title": "Team Calendar",
+    "description": "View and manage your team's schedule with ease, including shifts, availability, upcoming appointments, and assignment coordination in one place.",
+    "icon": "CalendarIcon",
+    "readMoreText": "Read more",
+    "route": "/utilities/calendar",
+    "sessionStorage": {
+      "key": "refreshScheduler",
+      "value": "true"
+    }
+  },
+  {
+    "id": "training-materials",
+    "title": "Training Materials",
+    "description": "Access learning resources and documentation to support staff training, improve workflows, and ensure accurate use of system features and tools.",
+    "icon": "TrainingIcon",
+    "readMoreText": "Read more",
+    "route": "/utilities/training-materials"
+  },
+  {
+    "id": "directory",
+    "title": "Directory",
+    "description": "Quickly find contact details for team members, including phone numbers, emails, and roles, to streamline communication and collaboration.",
+    "icon": "DirectoryIcon",
+    "readMoreText": "Read more",
+    "route": "/utilities/directory"
+  },
+  {
+    "id": "suggestions-feedback",
+    "title": "Suggestions and Feedback",
+    "description": "Provide input to improve the system by sharing feedback, suggesting features, and helping enhance usability and performance for all users.",
+    "icon": "FeedbackIcon",
+    "readMoreText": "Read more",
+    "route": "/utilities/suggestions-and-feedback"
+  },
+  {
+    "id": "dispo-consult",
+    "title": "Dispo Consult",
+    "description": "Use the Patient Discharge Planning Tool to coordinate care transitions, set follow-up tasks, and ensure safe, informed patient discharges.",
+    "icon": "DispoConsultIcon",
+    "readMoreText": "Read more",
+    "route": "/utilities/Dispo-Consult"
+  }
+] 

@@ -1,0 +1,15 @@
+#!/bin/sh
+
+# Exit early if no upstream is set
+if ! git rev-parse --abbrev-ref --symbolic-full-name @{u} >/dev/null 2>&1; then
+  echo "🟡 No upstream configured. Skipping pre-push check."
+  exit 0
+fi
+
+LOCAL=$(git rev-parse @)
+REMOTE=$(git rev-parse @{u})
+
+if [ "$LOCAL" != "$REMOTE" ]; then
+  echo "❌ Your local branch is behind the remote. Please pull first!"
+  exit 1
+fi

@@ -1,0 +1,351 @@
+.scheduler-container {
+  width: 100%;
+  height: 100%;
+}
+.dhx_cal_container {
+  height: calc(100% - 40px) !important;
+}
+.dhx_body {
+  position: absolute;
+}
+.dhx_cal_larea,
+.dhx_cal_lcontrols {
+  padding: 0px 20px 20px 20px !important;
+}
+
+.dhx_cal_light {
+  border-radius: 20px !important;
+}
+.dhx_cal_radio {
+  height: auto !important;
+}
+.dhx_cal_radio_item {
+  height: max-content;
+  font-size: 14px !important;
+}
+.purple {
+  --dhx-scheduler-event-background: linear-gradient(180deg, #5e3ae4 0%, #7557e3 100%);
+}
+
+.pink {
+  --dhx-scheduler-event-background: linear-gradient(180deg, #d071ef 0%, #ee71d5 100%);
+}
+
+.violet {
+  --dhx-scheduler-event-background: linear-gradient(180deg, #d071ef 0%, #ee71d5 100%);
+}
+
+.green {
+  --dhx-scheduler-event-background: linear-gradient(180deg, #12d979 0%, #1ecdeb 100%);
+}
+
+.yellow {
+  --dhx-scheduler-event-background: linear-gradient(
+    180deg,
+    #ffb725 0%,
+    #ffbb25 31.25%,
+    #faea27 100%
+  );
+}
+
+.blue {
+  --dhx-scheduler-event-background: linear-gradient(180deg, #3498db 0%, #2980b9 100%);
+}
+
+.orange {
+  --dhx-scheduler-event-background: linear-gradient(180deg, #f39c12 0%, #e67e22 50%, #d35400 100%);
+}
+
+.red {
+  --dhx-scheduler-event-background: linear-gradient(180deg, #e74c3c 0%, #c0392b 100%);
+}
+
+.dhx_section_time {
+  width: 100% !important;
+  justify-content: space-between !important;
+  height: auto !important;
+}
+.dhx_cal_light select {
+  border-radius: 16px !important;
+  cursor: pointer !important;
+  height: 40px !important;
+}
+.dhx_cal_ltitle {
+  border-radius: 20px 20px 0px 0px !important;
+  background: var(--input-bg) !important;
+  border: none !important;
+  padding: 20px !important;
+}
+.dhx_cal_lcontrols .dhx_btn_set.dhx_delete_btn_set,
+.scheduler_popup_button.dhtmlx_popup_button.scheduler_ok_button.dhtmlx_ok_button {
+  border-radius: 32px;
+  background: linear-gradient(89deg, #f33 0%, #f63 100%);
+  box-shadow: 0px 8px 16px -4px rgba(255, 51, 51, 0.5);
+  color: #fff !important;
+  padding: 20px 20px !important;
+  outline: none !important;
+}
+
+.dhx_cal_light {
+  max-width: 487px !important;
+  width: 95% !important;
+}
+
+.dhx_cal_lcontrols .dhx_btn_set .dhx_btn_inner {
+  display: none !important;
+}
+.dhx_btn_set.dhx_left_btn_set.dhx_cancel_btn_set {
+  border-radius: 32px;
+  background: #2b353d;
+  color: #fff !important;
+  padding: 20px !important;
+  outline: none !important;
+  border: none !important;
+}
+/* .dhx_cal_ltext .dhx_cal_radio {
+  flex-wrap: wrap;
+} */
+.dhx_cal_light .dhx_cal_larea .dhx_cal_radio {
+  flex-wrap: wrap;
+}
+.dhx_cal_ltext input[type='radio'] {
+  height: 50px !important;
+  width: 15px !important;
+}
+.dhx_cal_lsection {
+  color: var(--dhx-scheduler-navline-font-color) !important;
+  margin-top: 10px !important;
+  font-family: Gotham !important;
+  font-size: 13px !important;
+  font-style: normal !important;
+  font-weight: 500 !important;
+  line-height: 12px !important;
+  margin-bottom: 10px !important;
+}
+.dhx_cal_ltext textarea {
+  border-radius: 16px !important;
+  border: 1px solid rgba(5, 11, 17, 0.1) !important;
+  background: #fff !important;
+  height: 100px !important;
+}
+
+.dhx_btn_set.dhx_left_btn_set.dhx_save_btn_set,
+.scheduler_popup_button.dhtmlx_popup_button.scheduler_cancel_button.dhtmlx_cancel_button {
+  border-radius: 50px;
+  background: var(--primary-color, linear-gradient(225deg, #24a5df 0%, #127dc3 100%));
+  box-shadow: 0px 8px 16px -4px rgba(36, 165, 223, 0);
+  color: #fff !important;
+  padding: 20px !important;
+  outline: none !important;
+  border: none;
+}
+.dhx_title {
+  width: 100% !important;
+  justify-content: center !important;
+}
+
+
+.dhx_cal_tab {
+  height: 40px !important;
+  line-height: 40px !important;
+  padding: 0 25px !important;
+  border-radius: 32px !important;
+  background-color: transparent !important;
+  color: var(--dhx-scheduler-navline-font-color) !important;
+  font-family: 'Gotham', sans-serif !important;
+  font-size: 14px !important;
+  border: none !important;
+  position: relative !important;
+  top: 0 !important;
+  text-decoration: none !important;
+  cursor: pointer !important;
+  z-index: 1 !important;
+}
+
+.dhx_cal_tab.active {
+  background: linear-gradient(26.57deg, #2b353d 0%, #516473 100%) !important;
+  color: #ffffff !important;
+  box-shadow: 0px 8px 16px -4px rgba(47, 58, 67, 0.1) !important;
+  font-weight: 500 !important;
+}
+
+/* Remove standalone styles since we have a container now */
+.dhx_cal_tab_standalone {
+  border: none !important;
+}
+
+.dhx_month_link {
+  padding-right: unset !important;
+}
+
+.dhx_scale_bar {
+  font-size: 12px !important;
+  height: 100% !important;
+  padding: 10px 0px !important;
+  text-align: center !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.dhx_cal_today_button {
+  border-radius: 50px !important;
+  border: 1px solid rgba(43, 53, 61, 0.05) !important;
+  padding: 0 20px !important;
+  height: 40px !important;
+  line-height: 40px !important;
+  color: var(--dhx-scheduler-navline-font-color) !important;
+  font-family: 'Gotham', sans-serif !important;
+  font-size: 14px !important;
+  background-color: transparent !important;
+}
+
+.dhx_cal_prev_button,
+.dhx_cal_next_button {
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(43, 53, 61, 0.05) !important;
+  background-color: transparent !important;
+  color: #2b353d !important;
+  padding: 0 !important;
+  margin: 0 5px !important;
+}
+
+@media (max-width: 630px) {
+  .dhx_cal_larea {
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+  }
+  .dhx_cal_tab {
+padding: 0px 8px !important;
+line-height: 10px !important;
+font-size: 13px !important;
+
+  }
+  .dhx_cal_today_button {
+    padding: 0 10px !important;
+
+  }
+  .dhx_cal_lsection {
+    margin-top: 14px !important;
+    margin-bottom: 14px !important;
+  }
+  .dhx_cal_ltext input[type='radio'] {
+    height: auto;
+    width: 15px !important;
+  }
+  .dhx_cal_ltext textarea {
+    height: 60px !important;
+  }
+  .dhx_scheduler_month .dhx_cal_navline {
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    margin-bottom: 50px !important;
+    font-size: 12px !important;
+
+  }
+  .dhx_scheduler_day .dhx_cal_navline {
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    margin-bottom: 50px !important;
+    font-size: 11.5px !important;
+
+  }
+
+  .dhx_scheduler_week .dhx_cal_navline {
+    flex-wrap: wrap !important;
+    gap: 1px !important;
+    margin-bottom: 50px !important;
+    font-size: 12px !important;
+    width: 100% !important;
+  }
+
+  .dhx_scheduler_week .dhx_cal_date {
+    width: 90px;
+    margin-right: unset;
+    margin-left: unset;
+  }
+
+  .dhx_cal_tab_segmented.dhx_cal_tab_first {
+    margin-left: unset;
+  }
+
+  .dhx_cal_tab {
+    font-size: 12px;
+  }
+
+  .dhx_cal_prev_button,
+  .dhx_cal_next_button {
+    min-width: unset;
+    width: 20px !important;
+  }
+
+  .dhx_cal_prev_button:before {
+    font-size: 20px;
+  }
+
+  .dhx_cal_next_button:before {
+    font-size: 20px;
+  }
+
+  .dhx_cal_navline_flex .dhx_cal_date {
+    font-size: 11px;
+  }
+
+  .dhx_cal_today_button {
+    margin-right: 0;
+  }
+
+  /* .dhx_cal_light {
+    width: unset !important;
+  } */
+
+  .dhx_cal_light .dhx_cal_larea .dhx_cal_radio {
+    /* gap: 2px; */
+  }
+}
+
+
+
+/* Dark mode */
+html.dark .dhx_cal_container,
+html.dark .dhx_cal_header,
+html.dark .dhx_scale_bar,
+html.dark .dhx_month_head,
+html.dark .dhx_cal_navline {
+  background-color: var(--surface-bg) !important;
+  
+}
+
+
+
+/* Scheduler cell & modal overrides for dark mode */
+html.dark .dhx_cal_container .dhx_month_body,
+html.dark .dhx_cal_container .dhx_month_row td,
+html.dark .dhx_cal_container .dhx_month_head,
+html.dark .dhx_cal_container .dhx_scale_holder,
+html.dark .dhx_cal_container .dhx_scale_holder_now {
+  background-color: var(--surface-bg) !important;
+  border-color: var(--border-input) !important;
+}
+
+html.dark .dhx_cal_container .dhx_month_row td {
+  border-color: var(--border-input) !important;
+}
+
+
+html.dark .dhx_cal_light {
+  background-color: var(--surface-bg) !important;
+}
+
+html.dark .dhx_cal_light input,
+html.dark .dhx_cal_light select,
+html.dark .dhx_cal_light textarea {
+  background-color: var(--input-bg) !important;
+  color: var(--dhx-scheduler-navline-font-color) !important;
+  border: 1px solid var(--border-input) !important;
+}
+
+
+

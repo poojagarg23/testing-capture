@@ -1,0 +1,563 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 2rem;
+  margin-left: 50px;
+  overflow-x: hidden;
+}
+
+.diagnosisContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.heading {
+  padding: 10px;
+  color: black;
+}
+
+.whiteContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 0 0 30px 30px;
+  width: 100%;
+  /* overflow-y: scroll; */
+}
+
+.tabsContainer {
+  display: flex;
+  flex-direction: row;
+  min-height: 50px;
+  background-color: var(--tabs-grey);
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.activeTab {
+  border-top: 5px solid var(--purple);
+  background-color: white;
+  color: black;
+}
+
+.detailsTab {
+  border: 1px solid #9197b3;
+}
+
+.facesheetTab {
+  border: 1px solid #9197b3;
+}
+
+.chargesTab {
+  border: 1px solid #9197b3;
+}
+
+.facesheetContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  margin: 10px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.viewBtn {
+  display: flex;
+  width: 100%;
+  background-color: var(--light-purple);
+  color: white;
+  max-width: 100px;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.actionBtns {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 50%;
+  gap: 0.5rem;
+}
+
+.viewBtn:hover {
+  background-color: var(--purple);
+  color: white;
+}
+
+.facesheetRow {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border: 1px solid var(--font-grey);
+  border-radius: 5px;
+  padding: 2px 4px;
+  align-items: center;
+}
+
+.subContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 25%;
+  padding-bottom: 3rem;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.columnContainer {
+  display: flex;
+  gap: 0.4rem;
+  align-items: baseline;
+  width: 100%;
+}
+
+.inputField {
+  background-color: var(--whitesmoke);
+  border: 0;
+  border-radius: 5px;
+  padding: 15px 10px;
+  text-align: center;
+  outline: none;
+  height: 45px;
+  width: 250px;
+}
+
+.select {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 189px;
+}
+
+.selectInputField {
+  background-color: var(--whitesmoke);
+  border-radius: 5px;
+  color: black;
+  padding: 10px 10px;
+  height: 45px;
+  text-align: center;
+  text-align-last: center;
+  border: 0;
+  outline: 0;
+  width: 250px;
+}
+
+.dateField {
+  background-color: var(--whitesmoke);
+  color: black;
+  border: 0;
+  border-radius: 5px;
+  padding: 15px 10px;
+  height: 45px;
+  text-align: center;
+  text-align-last: center;
+  outline: none;
+  font-size: 0.8rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 250px;
+}
+
+/* label {
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 0.7rem;
+  margin-bottom: 0;
+  margin-top: 1rem;
+} */
+
+.dateField::placeholder {
+  text-align: center;
+  text-align-last: center;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  width: 50%;
+}
+
+.rowContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.inactiveButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 50px;
+  background-color: var(--tabs-grey);
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.activeButton {
+  background-color: var(--purple);
+  color: white;
+}
+
+.rectangleBtn {
+  display: block;
+  width: 100%;
+  padding: 7px;
+  font-size: 0.8rem;
+  text-align: center;
+  border-radius: 5px;
+  background-color: var(--light-purple);
+  color: white;
+  cursor: pointer;
+  margin-top: 24px;
+}
+
+.rectangleBtn:hover {
+  background-color: var(--purple);
+}
+
+.required {
+  color: red;
+}
+
+.checkboxContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  color: black;
+  margin-top: 16px;
+}
+
+.requiredFieldEmpty {
+  border: 1px solid #ff4444 !important;
+}
+
+.requiredFieldEmptyVisitType {
+  border: 1px solid #ff4444 !important;
+  border-radius: 10px;
+}
+
+.summaryPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  height: 550px;
+}
+
+.summaryPageNavigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.multiplePatientContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.multiplePatientSubContainer {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.multiplePatientContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  width: 100%;
+  padding: 30px;
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 20px;
+}
+
+.multiplePatientHeading {
+  margin-bottom: 1rem;
+  color: black;
+}
+
+.owningProviderField {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  width: 100%;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.owningProviderField label {
+  margin-left: 0;
+  font-size: 14px;
+  color: black;
+}
+
+.owningProviderSelect {
+  border-radius: 5px;
+  color: black;
+  height: 40px;
+  border: 1px solid rgb(184, 174, 174);
+  outline: 0;
+  padding: 0 10px;
+}
+
+.visitTypeSelector {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 6px;
+}
+
+.visitTypeSelector span {
+  color: black;
+  font-size: 14px;
+}
+
+.visitTypeOptions {
+  display: flex;
+  gap: 10px;
+}
+
+.visitTypeInactiveButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 15px;
+  border-radius: 6px;
+  width: 100px;
+  text-align: center;
+  cursor: pointer;
+  background-color: white;
+  border: 1px solid rgb(184, 174, 174);
+  color: black;
+  font-size: 14px;
+}
+
+.visitTypeInactiveButton.activeButton {
+  background-color: var(--purple);
+  color: white;
+  border: 1px solid var(--purple);
+}
+
+.fileUploadBox {
+  margin: 20px 0;
+  width: 100%;
+}
+
+.customFileInput {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  padding: 16px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #f8f9fa;
+  color: var(--purple);
+  transition: all 0.3s ease;
+  border: 1px solid rgb(184, 174, 174);
+  font-size: 16px;
+}
+
+.customFileInput:hover {
+  background: #f0f0f0;
+}
+
+.hiddenInput {
+  display: none;
+}
+
+.uplaodButton {
+  background-color: var(--purple);
+  display: flex;
+  justify-content: center;
+  border-radius: 6px;
+  padding: 4px;
+  width: 100%;
+  color: #ffffff;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.skipUplaodButton {
+  color: var(--purple);
+  cursor: pointer;
+}
+
+.patientDetailsContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  width: 100%;
+  box-shadow:
+    rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  align-self: center;
+}
+
+.patientDetailsSubContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.patientDetailsInputField {
+  border: 1px solid rgb(184, 174, 174);
+  border-radius: 5px;
+  padding: 12px 10px;
+}
+
+.patientDetailsSelectField {
+  border-radius: 5px;
+  color: black;
+  height: 40px;
+  border: 1px solid rgb(184, 174, 174);
+  outline: 0;
+  padding: 0 10px;
+}
+
+.patientDetailsDateField {
+  color: black;
+  border: 1px solid rgb(184, 174, 174);
+  border-radius: 5px;
+  padding: 11px 10px;
+  font-size: 0.8rem;
+}
+
+.patientDetailsHeadings {
+  color: black;
+  align-self: baseline;
+  margin: 10px 0;
+  font-weight: 400;
+}
+
+.noOverflow {
+  overflow-y: unset !important;
+}
+
+/* mobile */
+@media (max-width: 630px) {
+  .mainContainer {
+    padding: 10px;
+    margin-left: 0;
+  }
+
+  .btnContainer {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+  .inputField {
+    padding: 15px 3px;
+    font-size: 0.8rem;
+  }
+
+  .inactiveButton {
+    width: 150px;
+  }
+
+  .pb200 {
+    padding-bottom: 200px;
+  }
+
+  #ChargesHistory {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+
+  .selectInputField,
+  .inputField,
+  .dateField {
+    width: 166.6px;
+  }
+
+  .summaryPage {
+    max-width: 500px;
+    height: 450px;
+  }
+
+  .multiplePatientContent {
+    padding: 20px;
+    margin-bottom: 50px;
+  }
+
+  .multiplePatientHeading {
+    font-size: 22px;
+  }
+
+  .patientDetailsContent {
+    margin-bottom: 80px;
+  }
+}
+
+/* desktop */
+@media (min-width: 631px) {
+}
+
+@media (max-width: 1000px) and (orientation: landscape) {
+  .mainContainer {
+    padding: 1rem;
+    margin-left: 0;
+  }
+
+  .patientDetailsContent {
+    box-shadow: none;
+    margin-top: 0;
+  }
+
+  .multiplePatientContent {
+    box-shadow: none;
+  }
+}

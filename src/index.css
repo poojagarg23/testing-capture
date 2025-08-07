@@ -1,0 +1,1008 @@
+@import 'tailwindcss';
+
+/* CSS Variables for consistent theming */
+:root {
+  --bg-main: #f0f4f8;
+  /* Primary Colors */
+  --primary-blue: #24a5df;
+  --primary-blue-dark: #127dc3;
+  --primary-green: #95e545;
+  --primary-green-dark: #7acc29;
+
+  /* Text Colors */
+  --text-primary: #2b353d;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+  --text-muted-semi: rgba(156, 163, 175, 0.5);
+  --text-white: #ffffff;
+
+  /* input */
+  --input-bg: #fafafa;
+
+  /* table */
+  --table-header: #f2f2f2;
+  --table-hover: #f9fafb;
+  --table-secondary-header: #2B353D40;
+  /* Toggle Button */
+  --toggle-button-bg: #E6E6E6;
+
+  /* Background Colors */
+  --bg-subtle: #f9fafb;
+  --bg-attach-file: #FFFFFF;
+  --border-subtle: rgba(43, 53, 61, 0.1);
+  --border-input: rgba(43, 53, 61, 0.1);
+  --border-input-focus: rgba(43, 53, 61, 0.2);
+
+  /* Tab System Colors */
+  --tab-text-active: #2b353d;
+  --tab-text-inactive: #2b353d;
+  --tab-underline: #2b353d;
+  --tab-opacity-inactive: 0.3;
+  --tab-opacity-hover: 0.5;
+
+  /* Tab Typography */
+  --tab-font-size: 16px;
+  --tab-line-height: 19px;
+  --tab-underline-height: 1px;
+  --tab-underline-margin-top: 19px;
+  --tab-gap: 20px;
+
+  /* Status Indicators */
+  --status-success: theme('colors.green.500');
+  --status-error: theme('colors.red.500');
+  --status-warning: theme('colors.yellow.500');
+  --fill-error: theme('colors.red.500');
+  --status-error-custom: #ff4d4f;
+  --status-error-bg: #fff2f0;
+
+  /* Interactive Elements */
+  --hover-opacity: 0.8;
+  --active-color: theme('colors.blue.600');
+  --bg-overlay: rgba(0, 0, 0, 0.5);
+  --bg-disabled: theme('colors.gray.400');
+
+  /* Diagnosis Code Colors */
+  --diagnosis-primary-indicator: #e5322e;
+  --diagnosis-delete-gradient: linear-gradient(to bottom right, #f43f5e, #e11d48);
+
+  /* Success Colors */
+  --success-green: #87B36E;
+  --success-green-light: #dee2dc; 
+
+  /* Confirmation Modal Colors */
+  --modal-primary: #5e3ae4;
+  --modal-primary-hover: #4c2fd0;
+  --modal-primary-bg-hover: rgba(94, 58, 228, 0.05);
+  --modal-cancel-text: #3c3c43;
+  --modal-cancel-border: #d1d1d6;
+
+  /* Focus Effects */
+  --focus-ring-primary: rgba(36, 165, 223, 0.1);
+
+  /* Container Spacing */
+  --section-gap: theme('spacing.6');
+  --filter-gap: theme('spacing.4');
+
+  /* Reusable Component Colors */
+  --figma-dark-bg: #2b353d;
+  --figma-dark-bg-hover: #3a4851;
+  --figma-icon-gradient: linear-gradient(45deg, rgb(43, 53, 61) 0%, rgb(81, 100, 115) 100%);
+  --figma-card-shadow: 0px 4px 16px -2px rgba(0, 0, 0, 0.1), 0px 2px 8px -1px rgba(0, 0, 0, 0.06);
+  --figma-button-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+  /* Button Gradients & Colors */
+  --primary-color: linear-gradient(225deg, #24a5df 0%, #127dc3 100%);
+  --import-button-bg:
+    linear-gradient(0deg, #2b353d 0%, #2b353d 100%),
+    linear-gradient(225deg, #24a5df 0%, #127dc3 100%);
+  --btn-white-bg: #ffffff;
+  --btn-white-text: #2b353d;
+  --btn-white-border: rgba(43, 53, 61, 0.1);
+
+
+
+  /* Reusable Sizes */
+  --icon-size-sm: 20px;
+  --icon-size-md: 40px;
+  --button-size-md: 40px;
+  --container-max-width: 1200px;
+  --card-border-radius: 16px;
+  --grid-gap: 20px;
+
+
+  /* Layout Width Variables */
+  --sidebar-width-percent: 10%;
+  --gap-width-percent: 5%;
+  --main-width-percent: 85%;
+
+  /* Layout Constraints */
+  --sidebar-max-width: 300px;
+  --sidebar-min-width: 250px;
+  --gap-max-width: 25px;
+  --container-max-width: 3000px;
+  --rehab-modal:#2c3648;
+
+  /* Shadow Effects */
+  --card-shadow-lg: 0px 16px 32px -8px rgba(0, 0, 0, 0.05);
+  --card-shadow-lg-hover: 0px 16px 32px -8px rgba(0, 0, 0, 0.15);
+  /* macro area */
+  --macro-card:#2B353D0D;
+  --macro-button:linear-gradient(45deg, #2B353D 0%, #516473 100%);
+  --directory-card:#E6F1F2;
+  /* date */
+  --dhx-scheduler-scale-color: #2B353D !important;
+  --dhx-scheduler-month-header-color: #2B353D !important;
+  --dhx-scheduler-container-color: #2B353D !important;
+  --dhx-scheduler-navline-font-color:#2B353D !important;
+
+  /* Shimmer Placeholder Colors */
+  --shimmer-from: #f0f0f0; /* Light background stop */
+  --shimmer-to: #e0e0e0;   /* Darker background stop */
+
+}
+
+/* ---------- Dark overrides ---------- */
+html.dark {
+  --primary-blue: #127dc3;
+  --text-secondary: #f0f4f8;
+  --bg-main: #121212;
+  --text-primary: #f0f4f8;
+  --table-header: #2a2a2a;
+  --surface-bg: #1e1e1e;
+  --table-hover: #545454;
+  --input-bg: #242424;
+  --border-input: #F0F4F81A;
+  --text-muted: #F0F4F84D;
+  --text-muted-semi: rgba(240, 244, 248, 0.5);
+  --table-secondary-header: #F0F4F840;
+  --btn-white-bg: var(--surface-bg);
+  --btn-white-text: var(--text-primary);
+  --btn-white-border: rgba(240, 244, 248, 0.1);
+  --bg-attach-file: #242424;
+  --toggle-button-bg: #2A2A2A;
+  --success-green-light:#242424;
+  --macro-card:#F0F4F80D;
+  --macro-button:#F0F4F8;
+  --directory-card:#E6F1F2;
+  --dhx-scheduler-scale-color: #F0F4F8 !important;
+  --dhx-scheduler-month-header-color: #F0F4F8 !important;
+  --dhx-scheduler-container-color: #F0F4F8 !important;
+  --dhx-scheduler-navline-font-color:#F0F4F8 !important;
+  --status-error: theme('colors.red.400');
+  --primary-green-dark: #199A45;
+  /* Shimmer Placeholder Colors */
+  --shimmer-from: #3a3a3a; /* Light background stop for dark mode */
+  --shimmer-to: #555555;   /* Darker background stop for dark mode */
+  --rehab-modal:#3a3a3a;
+
+}
+
+html.dark .hover-bg-overlay {
+  background-color: var(--table-hover);
+}
+
+/* Override Tailwind's bg-white in dark mode to use surface background */
+html.dark .bg-white,
+html.dark [class*='\:bg-white'] {
+  background-color: var(--surface-bg) !important;
+}
+
+
+
+
+/* Layout utility classes using CSS variables */
+.sidebar-width {
+  width: var(--sidebar-width-percent);
+}
+
+.gap-width {
+  width: var(--gap-width-percent);
+}
+
+.main-width {
+  width: var(--main-width-percent);
+}
+
+/* Layout constraint utility classes */
+.sidebar-constraints {
+  max-width: var(--sidebar-max-width);
+  min-width: var(--sidebar-min-width);
+}
+
+.gap-constraints {
+  max-width: var(--gap-max-width);
+}
+
+.container-max-width {
+  max-width: var(--container-max-width);
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src:
+    url('./assets/fonts/Gotham-Light.woff2') format('woff2'),
+    url('./assets/fonts/Gotham-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src:
+    url('./assets/fonts/Gotham-Bold.woff2') format('woff2'),
+    url('./assets/fonts/Gotham-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src:
+    url('./assets/fonts/Gotham-BookItalic.woff2') format('woff2'),
+    url('./assets/fonts/Gotham-BookItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src:
+    url('./assets/fonts/Gotham-LightItalic.woff2') format('woff2'),
+    url('./assets/fonts/Gotham-LightItalic.woff') format('woff');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src:
+    url('./assets/fonts/Gotham-Black.woff2') format('woff2'),
+    url('./assets/fonts/Gotham-Black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src:
+    url('./assets/fonts/Gotham-BlackItalic.woff2') format('woff2'),
+    url('./assets/fonts/Gotham-BlackItalic.woff') format('woff');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src:
+    url('./assets/fonts/Gotham-BoldItalic.woff2') format('woff2'),
+    url('./assets/fonts/Gotham-BoldItalic.woff') format('woff');
+  font-weight: bold;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src:
+    url('./assets/fonts/Gotham-Book.woff2') format('woff2'),
+    url('./assets/fonts/Gotham-Book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src:
+    url('./assets/fonts/Gotham-Thin.woff2') format('woff2'),
+    url('./assets/fonts/Gotham-Thin.woff') format('woff');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham Ultra';
+  src:
+    url('./assets/fonts/Gotham-UltraItalic.woff2') format('woff2'),
+    url('./assets/fonts/Gotham-UltraItalic.woff') format('woff');
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src:
+    url('./assets/fonts/Gotham-XLight.woff2') format('woff2'),
+    url('./assets/fonts/Gotham-XLight.woff') format('woff');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham Ultra';
+  src:
+    url('./assets/fonts/Gotham-Ultra.woff2') format('woff2'),
+    url('./assets/fonts/Gotham-Ultra.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src:
+    url('./assets/fonts/Gotham-ThinItalic.woff2') format('woff2'),
+    url('./assets/fonts/Gotham-ThinItalic.woff') format('woff');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gotham';
+  src:
+    url('./assets/fonts/Gotham-Medium.woff2') format('woff2'),
+    url('./assets/fonts/Gotham-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+.gotham {
+  font-family: 'Gotham';
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+input[type='number']::-webkit-inner-spin-button,
+input[type='number']::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Date and Time Input Styling */
+input[type='date']::-webkit-calendar-picker-indicator,
+input[type='time']::-webkit-calendar-picker-indicator,
+input[type='datetime-local']::-webkit-calendar-picker-indicator {
+  color: var(--text-muted-semi);
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+input[type='date']::-webkit-input-placeholder,
+input[type='time']::-webkit-input-placeholder,
+input[type='datetime-local']::-webkit-input-placeholder {
+  color: var(--text-muted-semi) !important;
+  opacity: 0.3 !important;
+}
+
+input[type='date']::-moz-placeholder,
+input[type='time']::-moz-placeholder,
+input[type='datetime-local']::-moz-placeholder {
+  color: var(--text-muted-semi) !important;
+  opacity: 0.3 !important;
+}
+
+input[type='date']::placeholder,
+input[type='time']::placeholder,
+input[type='datetime-local']::placeholder {
+  color: var(--text-muted-semi) !important;
+  opacity: 0.3 !important;
+}
+
+/* Dark mode: increase contrast of calendar/time picker icons */
+html.dark input[type='date']::-webkit-calendar-picker-indicator,
+html.dark input[type='time']::-webkit-calendar-picker-indicator,
+html.dark input[type='datetime-local']::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+
+/* Note: filter invert affects SVG icon to appear white-ish on dark background */
+
+/* Button Base Styles */
+.btn-base {
+  font-family: 'Gotham';
+  font-weight: bold;
+  /* font-size: 14px; */
+  color: var(--text-white);
+  letter-spacing: -0.42px;
+  /* line-height: 1; */
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  white-space: nowrap;
+}
+
+/* Primary Button (Blue) */
+.btn-primary {
+  background: linear-gradient(195.544deg, rgb(36, 165, 223) 0%, rgb(18, 125, 195) 100%);
+  border-radius: 50px;
+  box-shadow: 0px 8px 16px -4px rgba(36, 165, 223, 0.1);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(195.544deg, rgb(26, 155, 213) 0%, rgb(8, 115, 185) 100%);
+  box-shadow: 0px 10px 20px -4px rgba(36, 165, 223, 0.15);
+}
+
+/* Secondary Button (Green) */
+.btn-secondary {
+  background: linear-gradient(195.446deg, rgb(149, 229, 69) 0%, rgb(122, 204, 41) 100%);
+  border-radius: 50px;
+  box-shadow: 0px 8px 16px -4px rgba(122, 204, 41, 0.1);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(195.446deg, rgb(139, 219, 59) 0%, rgb(112, 194, 31) 100%);
+  box-shadow: 0px 10px 20px -4px rgba(122, 204, 41, 0.15);
+}
+
+/* Tertiary Button (Red) */
+.btn-tertiary {
+  background: linear-gradient(89deg, #f33 0%, #f63 100%);
+  border-radius: 50px;
+  box-shadow: 0px 8px 16px -4px rgba(255, 80, 77, 0.1);
+}
+
+.btn-tertiary:hover {
+  background: linear-gradient(89deg, #e02424 0%, #ff5722 100%);
+  box-shadow: 0px 10px 20px -4px rgba(224, 36, 36, 0.15);
+}
+
+/* Dark Button (Charcoal/Gray) */
+.btn-dark {
+  background: var(--macro-button);
+  color: var(--input-bg);
+  border-radius: 50px;
+  box-shadow: 0px 8px 16px -4px rgba(75, 85, 99, 0.1);
+}
+
+.btn-dark:hover {
+  background: linear-gradient(195.255deg, rgb(85, 95, 109) 0%, rgb(65, 75, 91) 100%);
+  box-shadow: 0px 10px 20px -4px rgba(75, 85, 99, 0.15);
+
+}
+
+/* White Button */
+.btn-white {
+  background: var(--input-bg);
+  border: 1px solid var(--btn-white-border);
+  border-radius: 50px;
+  color: var(--btn-white-text);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.btn-white:hover {
+  background: var(--table-hover);
+  border-color: var(--btn-white-border);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Button Icon */
+.btn-icon {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Utility Classes for Common Patterns */
+
+/* Font Utilities */
+.font-gotham {
+  font-family: 'Gotham', sans-serif;
+}
+
+.font-gotham-bold {
+  font-family: 'Gotham';
+  font-weight: bold;
+}
+
+.font-gotham-medium {
+  font-family: 'Gotham';
+  font-weight: 500;
+}
+
+.font-gotham-normal {
+  font-family: 'Gotham';
+  font-weight: normal;
+}
+
+/* Color Utilities */
+.text-primary {
+  color: var(--primary-blue-dark);
+}
+
+.text-secondary {
+  color: var(--text-primary);
+}
+
+.text-muted {
+  color: var(--text-muted);
+}
+
+.text-error {
+  color: var(--status-error);
+}
+
+.text-error-custom {
+  color: var(--status-error-custom);
+}
+
+.bg-error-custom {
+  background-color: var(--status-error-custom);
+}
+
+.bg-error-bg {
+  background-color: var(--status-error-bg);
+}
+
+.border-error-custom {
+  border-color: var(--status-error-custom);
+}
+
+.bg-primary-gradient {
+  background: var(--primary-color);
+}
+
+.bg-subtle {
+  background-color: rgba(43, 45, 66, 0.05);
+}
+
+.bg-subtle-2 {
+  background: rgba(43, 53, 61, 0.05);
+}
+
+.bg-disabled {
+  background-color: var(--bg-disabled);
+}
+
+.hover-bg-subtle:hover {
+  background-color: var(--bg-subtle);
+}
+
+.border-subtle {
+  border-color: var(--table-header);
+}
+
+.border-input {
+  border: 1px solid var(--border-input);
+}
+
+.border-input-focus {
+  border-color: var(--border-input-focus);
+}
+
+/* Layout Utilities */
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-center-start {
+  display: flex;
+  align-items: center;
+}
+
+/* Component Utilities */
+.icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 5px;
+  border: 1px solid rgba(43, 45, 66, 0.05);
+}
+
+.icon-container-bg {
+  background-color: white;
+}
+
+/* Button Utilities */
+.btn-rounded {
+  border-radius: 50px;
+}
+
+.btn-circular {
+  border-radius: 50%;
+}
+
+/* Hover Utilities */
+.hover-bg-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: var(--table-hover);
+  opacity: 0;
+  transition: opacity 0.2s;
+  left: -32px;
+  right: -32px;
+}
+
+.sidebar-collapsed .hover-bg-overlay {
+  left: -12px;
+  right: -12px;
+}
+
+.group:hover .hover-bg-overlay {
+  opacity: 1;
+}
+
+/* Text Sizes */
+.text-sidebar {
+  font-size: 14px;
+  line-height: 17px;
+}
+
+/* Transition Utilities */
+.transition-all {
+  transition: all 0.2s ease;
+}
+
+.transition-colors {
+  transition: color 0.2s ease;
+}
+
+.transition-bg {
+  transition: background-color 0.2s ease;
+}
+
+/* Interactive Effects */
+.click-effect {
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.click-effect:hover {
+  transform: scale(1.015);
+}
+
+.click-effect:active {
+  transform: scale(0.95);
+}
+
+.required {
+  color: red;
+}
+
+/* Tab System - Hybrid Approach with Tailwind + CSS Variables */
+.tab-system {
+  /* Base tab colors and measurements as CSS variables */
+  --tab-text: theme('colors.slate.800');
+  --tab-underline: theme('colors.slate.800');
+  --tab-spacing: theme('spacing.5');
+  --tab-underline-offset: theme('spacing.2');
+  /* Reduced from spacing.5 (20px) to spacing.2 (8px) */
+}
+
+/* Only keep truly reusable/complex patterns as classes */
+.tab-underline-base {
+  @apply absolute left-0 h-px bg-current;
+  top: calc(100% + var(--tab-underline-offset));
+}
+
+/* Status Indicator Utilities */
+.status-indicator {
+  @apply inline-flex items-center justify-center w-6 h-6 rounded-full text-white text-sm;
+}
+
+.status-success {
+  background-color: var(--status-success);
+}
+
+.status-error {
+  background-color: var(--status-error);
+}
+
+/* Interactive Icon Utilities */
+.icon-interactive {
+  @apply cursor-pointer transition-all duration-150;
+}
+
+.icon-interactive:hover {
+  opacity: var(--hover-opacity);
+}
+
+.icon-interactive:active {
+  color: var(--active-color);
+}
+
+/* Reusable Component Utility Classes */
+.figma-icon-gradient {
+  background-image: var(--figma-icon-gradient);
+}
+
+.figma-card-shadow {
+  box-shadow: var(--figma-card-shadow);
+}
+
+.figma-button-shadow {
+  box-shadow: var(--figma-button-shadow);
+}
+
+.figma-dark-bg {
+  background-color: var(--figma-dark-bg);
+}
+
+.figma-dark-bg-hover:hover {
+  background-color: var(--figma-dark-bg-hover);
+}
+
+.bg-primary-gradient-btn {
+  background: var(--primary-color, linear-gradient(225deg, #24a5df 0%, #127dc3 100%));
+}
+
+.bg-import-button {
+  background: var(--import-button-bg);
+}
+
+/* 
+.container-max {
+  max-width: var(--container-max-width);
+} */
+
+.icon-size-sm {
+  width: var(--icon-size-sm);
+  height: var(--icon-size-sm);
+}
+
+.icon-size-md {
+  width: var(--icon-size-md);
+  height: var(--icon-size-md);
+}
+
+.button-size-md {
+  width: var(--button-size-md);
+  height: var(--button-size-md);
+}
+
+/* Utility classes for DiagnosisReviewTable colours */
+.bg-primary-blue {
+  background-color: var(--primary-blue);
+}
+
+.hover-bg-primary-blue:hover {
+  background-color: var(--primary-blue-dark);
+}
+
+.focus-ring-primary:focus {
+  --tw-ring-color: var(--primary-blue);
+}
+
+.focus-border-primary:focus {
+  border-color: var(--primary-blue);
+}
+
+/* Table group header background (light grey, matches Figma #f2f2f2) */
+.bg-table-group {
+  background-color: var(--table-header);
+}
+
+/* Pale blue fill for the primary diagnosis data row (#eef5ff) */
+.bg-primary-row {
+  background-color: #eef5ff;
+}
+
+/* Section divider – 25% opaque charcoal (#2b353d) */
+.bg-section-divider {
+  background-color: rgba(43, 53, 61, 0.25);
+}
+
+/* Slightly darker grey for section label rows (≈ Tailwind gray-300) */
+.bg-label {
+  background-color: #d1d5db;
+}
+
+.shimmer {
+  background: linear-gradient(90deg, var(--shimmer-from) 25%, var(--shimmer-to) 50%, var(--shimmer-from) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite linear;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* ───── HoverContent utilities ───── */
+@layer utilities {
+
+  /* Fade-in animation (matches previous CSS) */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .animate-fadeIn {
+    animation: fadeIn 0.1s ease-out;
+  }
+
+  /* Updated for slimmer, lighter scrollbar */
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 6px;
+        height: 1px;
+  }
+
+  /* Lighten scrollbar thumb */
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: #bdbdbd; /* lighter than #888 */
+    border-radius: 4px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: #a3a3a3; /* slightly darker on hover */
+  }
+}
+
+/* ───── Generic card shadow utility (matches DirectoryCard) ───── */
+.card-shadow-lg {
+  box-shadow: var(--card-shadow-lg);
+}
+
+.card-shadow-lg-hover:hover {
+  box-shadow: var(--card-shadow-lg-hover);
+}
+
+/* Main background utility */
+.bg-main {
+  background-color: var(--bg-main);
+}
+
+/* Diagnosis Code Utilities */
+.text-diagnosis-primary {
+  color: var(--diagnosis-primary-indicator);
+}
+
+.bg-diagnosis-delete {
+  background: var(--diagnosis-delete-gradient);
+}
+
+/* ----- Tab Button Utilities ----- */
+.tab-btn-base {
+  padding-left: 1.5rem;
+  /* px-6 */
+  padding-right: 1.5rem;
+  padding-top: 0.75rem;
+  /* py-3 */
+  padding-bottom: 0.75rem;
+  font-size: 0.875rem;
+  /* text-sm */
+  font-family: 'Gotham', sans-serif;
+  font-weight: 500;
+  border-bottom-width: 2px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.tab-btn-active {
+  color: var(--text-primary);
+  border-color: var(--text-primary);
+}
+
+.tab-btn-inactive {
+  color: var(--text-muted);
+  border-color: transparent;
+}
+
+.tab-btn-inactive:hover {
+  color: var(--text-primary);
+}
+
+/* ------------------------------- */
+
+/* Success text & background utilities */
+.text-success {
+  color: var(--success-green);
+}
+
+.bg-success-light {
+  background-color: var(--success-green-light);
+}
+.files .file-item .rename-file-container.list {
+    top: 0px  !important;
+    left: 58px;
+    text-align: left;}
+/* ─── Visit-code list height ─────────────────────────────── */
+.visit-code-list {            /* default for screens < 1960 px */
+  height: 200px;
+}
+
+
+@media (min-width: 1960px) {  /* screens 1960 px and wider     */
+  .visit-code-list {
+    height: 250px;
+  }
+}
+@media (max-width: 1000px) and (orientation: landscape) {
+  .scroll{
+    overflow: unset;
+  }
+  .macro-height{
+    height: calc(100vh - 90px);
+  }
+  .height-landscape{
+    height: unset;
+  }
+  .landscape-text{
+    font-size: 12px;
+    font-weight: 500;
+  }
+  .landscape-grid{
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .landscape-row{
+    flex-direction: row;
+  justify-content: space-between;
+  }
+  .landscape-table{
+    max-height: 300px;
+  }
+  .landscape-aside{
+    width: 400px;
+  }
+  .landscape-dropdown{
+    max-height: 200px;
+  }
+}
+@media screen and (min-width: 1900px) and (max-width: 2049px) and (min-height: 890px) and (max-height: 1090px) {
+    .visit-code-list {            
+      height: 150px;
+    }
+    .note-list {     
+      padding-top: 0px;
+      padding-bottom:2px;       
+    }
+    .diagnosis-code-textarea {
+      height: 100px;
+    }
+    .note-list-text {
+      margin-bottom: 4px;
+    }
+    .visit-code-header{
+      min-height: 38px;
+    }
+    .visit-code-container{
+      margin-bottom: 0px;
+    }
+    .notes-icd{
+      padding: 0px;
+    }
+    .diagnosis-area{
+    min-height: 180px;
+    max-height: 180px;
+    }
+}
+@media screen and (min-width: 1920px) {
+  .macro-container {
+    height: 100%;
+  }
+}
