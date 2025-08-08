@@ -1,15 +1,16 @@
+# .husky/pre-push
 #!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
 
-# Exit early if no upstream is set
-if ! git rev-parse --abbrev-ref --symbolic-full-name @{u} >/dev/null 2>&1; then
-  echo "🟡 No upstream configured. Skipping pre-push check."
-  exit 0
-fi
+echo "Fetching latest changes..."
+git fetch
 
 LOCAL=$(git rev-parse @)
 REMOTE=$(git rev-parse @{u})
 
 if [ "$LOCAL" != "$REMOTE" ]; then
-  echo "❌ Your local branch is behind the remote. Please pull first!"
+  echo "❌ Your branch is behind the remote. Run: git fetch && check changes."
   exit 1
 fi
+
+echo "✅ Branch is up to date, pushing..."
