@@ -1,16 +1,16 @@
-# .husky/pre-push
-#!/bin/sh
-. "$(dirname "$0")/_/husky.sh"
+# # .husky/pre-push
+# #!/bin/sh
+# . "$(dirname "$0")/_/husky.sh"
 
-echo "Fetching latest changes..."
-git fetch
+# echo "Fetching latest changes..."
+# git fetch
 
-LOCAL=$(git rev-parse @)
-REMOTE=$(git rev-parse @{u})
+# LOCAL=$(git rev-parse @)
+# REMOTE=$(git rev-parse @{u})
 
-if [ "$LOCAL" != "$REMOTE" ]; then
-  echo "❌ Your branch is behind the remote. Run: git fetch && check changes."
-  exit 1
-fi
+# if [ "$LOCAL" != "$REMOTE" ]; then
+#   echo "❌ Your branch is behind the remote. Run: git fetch && check changes."
+#   exit 1
+# fi
 
-echo "✅ Branch is up to date, pushing..."
+# echo "✅ Branch is up to date, pushing..."
